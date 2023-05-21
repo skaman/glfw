@@ -154,6 +154,7 @@ endif()
 
 if (GLFW_BUILD_WIN32)
     list(APPEND glfw_PKG_LIBS "-lgdi32")
+    target_link_libraries(glfw PRIVATE dwmapi.lib)
 endif()
 
 if (GLFW_BUILD_COCOA)
